@@ -10,6 +10,3 @@ Get All Users
     Status Should Be  200  ${response}
     Should Contain  ${response.text}  "Leanne Graham"
 
-Status Should Be
-    [Arguments]  ${response}  ${status_code}
-    Should Be Equal As Numbers  ${response.status_code}  ${status_code}
