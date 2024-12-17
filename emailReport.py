@@ -53,7 +53,7 @@ def send_sns_email():
         # Publish message to the SNS topic
         response = sns_client.publish(
             TopicArn=topic_arn,
-            Message=message,
+            Message="message",
             Subject=subject
         )
         
