@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.12.1 on win32)" generated="20241129 17:03:06.152" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.12.1 on win32)" generated="20241217 14:08:32.648" rpa="false" schemaversion="4">
 <suite id="s1" name="Api Test" source="C:\Users\t762494\Documents\Learning\test2\robot-api-tests\api_test.robot">
-<test id="s1-t1" name="Get All Users" line="8">
+<test id="s1-t1" name="Get All Users And Send Email" line="9">
 <kw name="GET" library="RequestsLibrary">
 <var>${response}</var>
 <arg>${API_URL}/users</arg>
 <doc>Sends a GET request.</doc>
-<msg timestamp="20241129 17:03:06.650" level="INFO">GET Request : url=https://jsonplaceholder.typicode.com/users 
+<msg timestamp="20241217 14:08:33.148" level="INFO">GET Request : url=https://jsonplaceholder.typicode.com/users 
  path_url=/users 
  headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg timestamp="20241129 17:03:06.650" level="INFO">GET Response : url=https://jsonplaceholder.typicode.com/users 
+<msg timestamp="20241217 14:08:33.148" level="INFO">GET Response : url=https://jsonplaceholder.typicode.com/users 
  status=200, reason=OK 
- headers={'Date': 'Sat, 30 Nov 2024 00:03:06 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1730875880&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=RPc2PDLX0y696QxAe0tPdVDFOEK7xYbZFYuy69aQRwQ%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1730875880&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=RPc2PDLX0y696QxAe0tPdVDFOEK7xYbZFYuy69aQRwQ%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'X-Ratelimit-Limit': '1000', 'X-Ratelimit-Remaining': '997', 'X-Ratelimit-Reset': '1730875897', 'Vary': 'Origin, Accept-Encoding', 'Access-Control-Allow-Credentials': 'true', 'Cache-Control': 'max-age=43200', 'Pragma': 'no-cache', 'Expires': '-1', 'X-Content-Type-Options': 'nosniff', 'Etag': 'W/"160d-1eMSsxeJRfnVLRBmYJSbCiJZ1qQ"', 'Content-Encoding': 'gzip', 'Via': '1.1 vegur', 'CF-Cache-Status': 'HIT', 'Age': '453', 'Server': 'cloudflare', 'CF-RAY': '8ea6928e383cc3a1-SEA', 'alt-svc': 'h3=":443"; ma=86400', 'server-timing': 'cfL4;desc="?proto=TCP&amp;rtt=32830&amp;min_rtt=32086&amp;rtt_var=13522&amp;sent=4&amp;recv=6&amp;lost=0&amp;retrans=0&amp;sent_bytes=2841&amp;recv_bytes=783&amp;delivery_rate=76751&amp;cwnd=241&amp;unsent_bytes=0&amp;cid=17f09d59b1451547&amp;ts=61&amp;x=0"'} 
+ headers={'Date': 'Tue, 17 Dec 2024 21:08:32 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1732628099&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=4dCsxv1QHXHfGQXYkAiATQGu6Rqx%2FmmzWGXWxRNBRms%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1732628099&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=4dCsxv1QHXHfGQXYkAiATQGu6Rqx%2FmmzWGXWxRNBRms%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'X-Ratelimit-Limit': '1000', 'X-Ratelimit-Remaining': '999', 'X-Ratelimit-Reset': '1732628136', 'Vary': 'Origin, Accept-Encoding', 'Access-Control-Allow-Credentials': 'true', 'Cache-Control': 'max-age=43200', 'Pragma': 'no-cache', 'Expires': '-1', 'X-Content-Type-Options': 'nosniff', 'Etag': 'W/"160d-1eMSsxeJRfnVLRBmYJSbCiJZ1qQ"', 'Content-Encoding': 'gzip', 'Via': '1.1 vegur', 'CF-Cache-Status': 'HIT', 'Age': '3458', 'Server': 'cloudflare', 'CF-RAY': '8f39e39a1f3a681c-SEA', 'alt-svc': 'h3=":443"; ma=86400', 'server-timing': 'cfL4;desc="?proto=TCP&amp;rtt=25420&amp;min_rtt=24703&amp;rtt_var=9776&amp;sent=4&amp;recv=6&amp;lost=0&amp;retrans=0&amp;sent_bytes=2840&amp;recv_bytes=783&amp;delivery_rate=118204&amp;cwnd=236&amp;unsent_bytes=0&amp;cid=b1d86853f6d2c81f&amp;ts=50&amp;x=0"'} 
  body=[
   {
     "id": 1,
@@ -247,24 +247,35 @@
   }
 ] 
  </msg>
-<msg timestamp="20241129 17:03:06.650" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20241129 17:03:06.330" endtime="20241129 17:03:06.650"/>
+<msg timestamp="20241217 14:08:33.148" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20241217 14:08:32.834" endtime="20241217 14:08:33.149"/>
 </kw>
 <kw name="Status Should Be" library="RequestsLibrary">
 <arg>200</arg>
 <arg>${response}</arg>
 <doc>Fails if response status code is different than the expected.</doc>
-<status status="PASS" starttime="20241129 17:03:06.650" endtime="20241129 17:03:06.650"/>
+<status status="PASS" starttime="20241217 14:08:33.149" endtime="20241217 14:08:33.149"/>
 </kw>
 <kw name="Should Contain" library="BuiltIn">
 <arg>${response.text}</arg>
 <arg>"Leanne Graham"</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" starttime="20241129 17:03:06.650" endtime="20241129 17:03:06.650"/>
+<status status="PASS" starttime="20241217 14:08:33.149" endtime="20241217 14:08:33.150"/>
 </kw>
-<status status="PASS" starttime="20241129 17:03:06.330" endtime="20241129 17:03:06.655"/>
+<kw name="Run Process" library="Process">
+<arg>python</arg>
+<arg>emailReport.py</arg>
+<doc>Runs a process and waits for it to complete.</doc>
+<msg timestamp="20241217 14:08:33.150" level="INFO">Starting process:
+python emailReport.py</msg>
+<msg timestamp="20241217 14:08:33.162" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20241217 14:08:33.657" level="INFO">Process completed.</msg>
+<status status="PASS" starttime="20241217 14:08:33.150" endtime="20241217 14:08:33.657"/>
+</kw>
+<doc>This test case makes an API call and then sends an email via SNS using a Python script.</doc>
+<status status="PASS" starttime="20241217 14:08:32.834" endtime="20241217 14:08:33.657"/>
 </test>
-<status status="PASS" starttime="20241129 17:03:06.152" endtime="20241129 17:03:06.657"/>
+<status status="PASS" starttime="20241217 14:08:32.650" endtime="20241217 14:08:33.658"/>
 </suite>
 <statistics>
 <total>
