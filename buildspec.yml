@@ -11,6 +11,8 @@ phases:
     commands:
       - echo Running Robot Framework tests...
       - robot api_test.robot
+      - echo "Sleeping for 10 seconds to wait for output.xml"
+      - sleep 10  # Add a delay to ensure output.xml is fully generated
       - python emailReport.py
 artifacts:
   files:
