@@ -18,6 +18,3 @@ Get All Users And Send Email
     # Verify that a user is found in the response text
     Should Contain  ${response.text}  "Leanne Graham"
     
-    # After successful API request, send the email via SNS
-    Run Process    python    emailReport.py
-
