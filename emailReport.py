@@ -45,7 +45,7 @@ def send_sns_email():
     
     # Generate the test report
     xml_file = 'output.xml'  # Path to your output.xml file
-    # message = generate_test_report(xml_file)  # Get the report content
+    message = generate_test_report(xml_file)  # Get the report content
     
     subject = "SNS Email Notification: Test Results"
     
@@ -53,7 +53,7 @@ def send_sns_email():
         # Publish message to the SNS topic
         response = sns_client.publish(
             TopicArn=topic_arn,
-            Message="message",
+            Message=message,
             Subject=subject
         )
         
